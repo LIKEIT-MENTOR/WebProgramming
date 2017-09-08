@@ -12,7 +12,7 @@ import common.UtillLogic;
 public class DaoUtil {
 
 	// SQLの記号
-	/**  */
+	/** where */
 	public final String SQL_WHERE = "where";
 	/** and */
 	public final String SQL_AND = "and";
