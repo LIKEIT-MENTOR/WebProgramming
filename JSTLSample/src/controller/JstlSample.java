@@ -40,7 +40,7 @@ public class JstlSample extends HttpServlet {
 			sampleList.add("4番目");
 			request.setAttribute("sampleList", sampleList);
 
-			request.getRequestDispatcher("/WEB-INF/jstl.jsp").forward(request, response);
+			request.getRequestDispatcher("/WEB-INF/jsp/jstl.jsp").forward(request, response);
 
 		} catch (Exception e) {
 			e.printStackTrace();

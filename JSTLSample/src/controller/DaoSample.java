@@ -32,11 +32,12 @@ public class DaoSample extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
 			UserDao userDao = new UserDao();
+
 			List<UserBean> userList = userDao.findAll();
+
 			request.setAttribute("userList", userList);
 
-			request.getRequestDispatcher("/WEB-INF/index.jsp").forward(request, response);
-
+			request.getRequestDispatcher("/WEB-INF/jsp/daoSample.jsp").forward(request, response);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -46,7 +47,23 @@ public class DaoSample extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
-	}
+		try {
+			request.setCharacterEncoding("UTF-8");
 
+			UserDao userDao = new UserDao();
+
+			List<UserBean> userList = userDao.searchUser(
+				request.getParameter("login_id"),
+				request.getParameter("name"),
+				request.getParameter("birth_date_from"),
+				request.getParameter("birth_date_to")
+			);
+
+			request.setAttribute("userList", userList);
+
+			request.getRequestDispatcher("/WEB-INF/jsp/daoSample.jsp").forward(request, response);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }
