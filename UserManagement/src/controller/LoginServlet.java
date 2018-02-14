@@ -56,10 +56,8 @@ public class LoginServlet extends HttpServlet {
 		UserDao userDao = new UserDao();
 		User user = userDao.findByLoginInfo(loginId, password);
 
-		/** テーブルに該当のデータが見つかった場合 **/
+		/** テーブルに該当のデータが見つからなかった場合 **/
 		if (user == null) {
-			/** テーブルに該当のデータが見つからなかった場合 **/
-
 			// リクエストスコープにエラーメッセージをセット
 			request.setAttribute("errMsg", "ログインに失敗しました。");
 

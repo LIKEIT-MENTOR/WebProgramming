@@ -37,7 +37,7 @@ public class UserListServlet extends HttpServlet {
 		UserDao userDao = new UserDao();
 		List<User> userList = userDao.findAll();
 
-		// セッションにユーザ一覧情報をセット
+		// リクエストスコープにユーザ一覧情報をセット
 		request.setAttribute("userList", userList);
 
 		// ユーザ一覧のjspにフォワード
