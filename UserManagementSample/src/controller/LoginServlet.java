@@ -47,6 +47,8 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+        // リクエストパラメータの文字コードを指定
+        request.setCharacterEncoding("UTF-8");
 
 		// リクエストパラメータの入力項目を取得
 		String loginId = request.getParameter("loginId");
