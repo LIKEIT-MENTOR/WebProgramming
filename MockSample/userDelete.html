@@ -1,62 +1,49 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ユーザ削除画面</title>
-    <!-- BootstrapのCSS読み込み -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- オリジナルCSS読み込み -->
-    <link href="css/original/common.css" rel="stylesheet">
-    <!-- Jqeryの読み込み -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    <!-- BootstrapのJS読み込み -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- レイアウトカスタマイズ用個別CSS -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ユーザ削除画面</title>
+  <!-- BootstrapのCSS読み込み -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- オリジナルCSS読み込み -->
+  <link href="css/original/common.css" rel="stylesheet">
 
-  </head>
-  <body>
+</head>
+<body>
 
-    <!-- header -->
-    <header>
-      <nav class="navbar navbar-inverse">
-      	<div class="container">
-      		<div class="navbar-header">
-            <a class="navbar-brand" href="userList.html">ユーザ管理システム</a>
-      		</div>
+  <!-- header -->
+  <header>
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">ユーザ管理システム</a>
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+          <a class="nav-link" href="#">ログアウト</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- /header -->
 
-          <ul class="nav navbar-nav navbar-right">
-  						<li class="navbar-text">ユーザ名 さん </li>
-  						<li class="dropdown">
-  							<a href="index.html" class="navbar-link logout-link">ログアウト</a>
-              </li>
-  				</ul>
-      	</div>
-      </nav>
-    </header>
-    <!-- /header -->
+  <!-- body -->
+  <div class="container">
 
-
-    <!-- body -->
-    <div class="container">
-
-      <div class="panel panel-default">
-        <div class="panel-body">
-
-          <p>ログインID:id0001</p>
-          <p>を本当に削除してもよろしいでしょうか。</p>
-
-          <div class="text-center">
-            <a class="btn btn-default form-submit" href="userList.html">いいえ</a>
-            <a class="btn btn-primary form-submit" href="userList.html">はい</a>
-          </div>
-        </div>
-      </div>
-
+      <p>id0001を消去しますか？</p>
 
       <div class="col-xs-4">
-        <a href="userList.html">戻る</a>
+        <a href="userList.html" class="btn btn-light">いいえ</a>
+        <a href="userList.html" class="btn btn-primary">はい</a>
       </div>
-    </div>
-  </body>
+
+    </form>
+
+
+  </div>
+</div>
+
+
+
+
+
+</body>
 </html>
