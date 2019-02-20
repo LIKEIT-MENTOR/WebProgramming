@@ -39,11 +39,13 @@ public class UserDao {
             pStmt.setString(2, password);
             ResultSet rs = pStmt.executeQuery();
 
-             // 主キーに紐づくレコードは1件のみなので、rs.next()は1回だけ行う
+
+            // 主キーに紐づくレコードは1件のみなので、rs.next()は1回だけ行う
             if (!rs.next()) {
                 return null;
             }
 
+            // 必要なデータのみインスタンスのフィールドに追加
             String loginIdData = rs.getString("login_id");
             String nameData = rs.getString("name");
             return new User(loginIdData, nameData);
